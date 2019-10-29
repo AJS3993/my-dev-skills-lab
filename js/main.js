@@ -12,21 +12,32 @@ $('ul').css('list-style-type', 'none');
 
 $('ul').css('color', 'rgb(244,181,94)');
 
+$('ul').css('font-size', '20px');
+
 $('button').css('border-color', 'rgb(157,194,132)')
 
 $('button').css('border-width', '2px')
+
+$('button').css('height', '26px')
+
+$('button').css('color', 'rgb(157,194,132)')
 
 $('input').css('border-color', 'rgb(157,194,132)')
 
 $('input').css('border-width', '2px')
 
+$('input').css('height', '20px')
+
+
 var inp;
 
 $('#btn').click(function() {
 inp = $('#textfield').val();
-$('ul').append('<li>' + inp + '</li>')
+$('ul').append('<li><button id="red" class = "btn btn-xs btn-danger">X</button>    ' + inp + '</li>')
 });
 
 
 
-
+$(document).on('click', 'li', function(){
+    $(this).remove();
+})
